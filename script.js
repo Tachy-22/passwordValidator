@@ -15,8 +15,10 @@ function use() {
         count++;
       }
     }
-    var count2 = 0;
-    for (var i = 0; i < 7; i++) {
+    var chars = ["!", "@", "#", "$", "%", "&", "*"];
+    var count2;
+    count2 = 0;
+    for (var i = 0; i < chars.length; i++) {
       var character = chars[i];
       if (passwordVal.includes(character) == false) {
         count2 = count2;
@@ -24,6 +26,7 @@ function use() {
         count2 = count2 + 1;
       }
     }
+    //
     if (count2 >= 2 && count >= 2 && passwordVal.length >= 7) {
       document.getElementById("para").innerHTML = "Strong";
     } else {
